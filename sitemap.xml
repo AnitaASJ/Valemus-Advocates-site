@@ -1,22 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://sitemaps.org">
-
-  <!-- Homepage -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://velamusadvocates.com</loc>
-    <lastmod>2026-10-14</lastmod>
+    <loc>https://valemusadvocates.com/</loc>
+    <priority>1.0</priority>
   </url>
-
-  <!-- Sakira Moses Profile Page -->
   <url>
-    <loc>https://velamusadvocates.comsakira-moses.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <loc>https://valemusadvocates.com/sakira-moses.html</loc>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Legal Notice Page -->
   <url>
-    <loc>https://velamusadvocates.comlegal-notice.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <loc>https://valemusadvocates.com/legal-notice.html</loc>
+    <priority>0.3</priority>
   </url>
-
 </urlset>
