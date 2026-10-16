@@ -4,21 +4,15 @@
   <url>
     <loc>https://velamusadvocates.com</loc>
     <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
   </url>
   <!-- Sakira Moses Profile Page -->
   <url>
-    <loc>https://velamusadvocates.comsakira-moses.html</loc>
+    <loc>https://velamusadvocates.com/sakira-moses.html</loc>
     <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <!-- Legal Notice Page -->
   <url>
-    <loc>https://velamusadvocates.comlegal-notice.html</loc>
+    <loc>https://velamusadvocates.com/legal-notice.html</loc>
     <lastmod>2026-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>
