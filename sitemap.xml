@@ -1,18 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://sitemaps.org">
+
   <!-- Homepage -->
   <url>
     <loc>https://velamusadvocates.com</loc>
     <lastmod>2026-10-14</lastmod>
   </url>
+
   <!-- Sakira Moses Profile Page -->
   <url>
-    <loc>https://velamusadvocates.com/sakira-moses.html</loc>
+    <loc>https://velamusadvocates.comsakira-moses.html</loc>
     <lastmod>2026-10-14</lastmod>
   </url>
+
   <!-- Legal Notice Page -->
   <url>
-    <loc>https://velamusadvocates.com/legal-notice.html</loc>
+    <loc>https://velamusadvocates.comlegal-notice.html</loc>
     <lastmod>2026-10-14</lastmod>
   </url>
+
 </urlset>
