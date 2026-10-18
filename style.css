@@ -521,7 +521,7 @@ header{
    NAVBAR BRANDING
 ===================================== */
 
-/*header {
+header {
     background: #090536;
     border-bottom: 3px solid goldenrod;
     position: fixed;
@@ -530,7 +530,7 @@ header{
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-} */
+} 
 
 .navbar {
     display: flex;
