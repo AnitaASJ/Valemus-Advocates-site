@@ -340,8 +340,7 @@ header{
     display:flex;
 
     justify-content:space-between;
-
-    align-items:center;
+    align-items: center;
 
 }
 
@@ -384,8 +383,12 @@ header{
 
     align-items:center;
 
-    gap:8px;
+    gap:5px;
 
+}
+
+.nav-item {
+    position: relative;
 }
 
 
@@ -395,15 +398,19 @@ header{
 
     color:var(--white);
 
-    font-size:.98rem;
+    font-size:0.92rem;
 
     font-weight:500;
 
-    padding:12px 20px;
+    padding:12px 10px;
 
-    border-radius:40px;
+    border-radius:25px;
 
     transition:var(--transition);
+
+    display: block;
+
+    white-space: nowrap;
 
 }
 
@@ -510,103 +517,250 @@ header{
 
 }
 
+/* =====================================
+   NAVBAR BRANDING
+===================================== */
 
-/* ==================================================
-                9. MENU BUTTONS
-================================================== */
+header {
+    background: #090536;
+    border-bottom: 3px solid goldenrod;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 10px 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.brand img {
+    width: 95px;
+    height: 95px;
+    object-fit: contain;
+}
+
+.brand-text h1 {
+    color: #090536;
+    font-family: Georgia, serif;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0 0 5px;
+}
+
+.brand-text p {
+    color: #25213b;
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.35;
+}
+
+.brand-text h1 {
+    color: goldenrod;
+    font-family: Georgia, serif;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0 0 5px;
+}
+
+.brand-text p {
+    color: #ffffff;
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.35;
+}
+
+
+/* =====================================
+   9. MENU BUTTONS
+===================================== */
 
 #menu-open-button,
-
-#menu-close-button{
-
-    display:none;
-
+#menu-close-button {
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
 
+/* =====================================
+   10. MOBILE NAVIGATION
+===================================== */
 
+@media (max-width: 900px) {
 
-/* ==================================================
-                10. MOBILE NAVIGATION
-================================================== */
-
-@media(max-width:900px){
-
-    #menu-open-button{
-
-        display:block;
-
-        color:var(--secondary-color);
-
-        font-size:1.7rem;
-
+    .navbar {
+        height: auto;
+        min-height: 72px;
+        padding: 8px 15px;
+        gap: 8px;
     }
 
-    #menu-close-button{
-
-        display:block;
-
-        position:absolute;
-
-        top:25px;
-
-        right:25px;
-
-        color:var(--white);
-
-        font-size:1.6rem;
-
+    /* Compact branding */
+    .brand {
+        min-width: 0;
+        flex: 1;
+        gap: 8px;
     }
 
-    .nav-menu{
-
-        position:fixed;
-
-        top:0;
-
-        left:-100%;
-
-        width:280px;
-
-        height:100vh;
-
-        background:var(--primary-color);
-
-        flex-direction:column;
-
-        justify-content:center;
-
-        gap:35px;
-
-        transition:.45s ease;
-
-        box-shadow:10px 0 30px rgba(0,0,0,.25);
-
+    .brand img {
+        width: 55px;
+        height: 55px;
+        object-fit: contain;
+        flex-shrink: 0;
     }
 
-    .show-mobile-menu .nav-menu{
-
-        left:0;
-
+    .brand-text {
+        min-width: 0;
     }
 
-    .nav-link{
-
-        font-size:1.1rem;
-
-        color:var(--white);
-
+    .brand-text h1 {
+        color: goldenrod;
+        font-size: clamp(0.85rem, 3.5vw, 1.2rem);
+        line-height: 1.2;
+        white-space: normal;
+        margin-bottom: 3px;
     }
 
-    .nav-link:hover{
-
-        background:var(--secondary-color);
-
-        color:var(--primary-color);
-
+    .brand-text p {
+        color: white;
+        font-size: 0.58rem;
+        line-height: 1.3;
     }
 
+    /* Gold hamburger button */
+    #menu-open-button {
+        display: block;
+        flex-shrink: 0;
+        color: goldenrod;
+        font-size: 1.7rem;
+        padding: 8px;
+    }
+
+    /* Slide-in navigation */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: auto;
+        right: -300px;
+        width: 280px;
+        max-width: 85vw;
+        height: 100vh;
+        padding: 80px 20px 30px;
+        background: #090536;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 8px;
+
+        overflow-y: auto;
+        transition: right 0.35s ease;
+        box-shadow: -8px 0 25px rgba(0,0,0,.25);
+        z-index: 1200;
+    }
+
+    .show-mobile-menu .nav-menu {
+        left: auto;
+        right: 0;
+    }
+
+    /* Gold close button */
+    #menu-close-button {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: goldenrod;
+        font-size: 1.7rem;
+        padding: 8px;
+    }
+
+    .nav-link {
+        color: white;
+        font-size: 1rem;
+        padding: 12px 15px;
+        white-space: normal;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(218,165,32,.15);
+        color: goldenrod;
+    }
+
+    /* Mobile dropdown */
+    .dropdown-menu {
+        position: static;
+        display: none;
+        min-width: 0;
+        width: 100%;
+        padding: 5px 0;
+        background: #151044;
+        border: none;
+        border-radius: 5px;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        color: white;
+        padding: 11px 20px;
+    }
 }
 
+/* Extra-small phones */
+@media (max-width: 400px) {
+
+    .navbar {
+        padding: 8px 10px;
+    }
+
+    .brand img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .brand {
+        gap: 6px;
+    }
+
+    .brand-text h1 {
+        font-size: 0.8rem;
+    }
+
+    .brand-text p {
+        font-size: 0.49rem;
+    }
+
+    #menu-open-button {
+        font-size: 1.5rem;
+    }
+}
 
 /* ==================================================
                 11. NAVBAR SCROLL EFFECT
@@ -1020,6 +1174,9 @@ header.scrolled{
 
 }
 
+
+
+
 /* ==================================================
                 13. ABOUT SECTION
 ================================================== */
@@ -1313,24 +1470,23 @@ margin-bottom: 30px;
     box-shadow: 0 14px 35px rgba(16, 12, 64, 0.10);
 }
 
-/* INITIALS BADGE */
-
-#team .lawyer-avatar {
+.team-image {
     width: 108px;
     height: 108px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 26px;
-    border: 3px solid #DCA51B;
+    margin-bottom: 25px;
     border-radius: 50%;
-    background: #100C40;
-    color: #E2AD24;
-    font-family: Georgia, serif;
-    font-size: 36px;
-    letter-spacing: 1px;
+    overflow: hidden;
+    border: 3px solid goldenrod;
 }
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
 
 /* ADVOCATE DETAILS */
 
@@ -1379,6 +1535,25 @@ margin-bottom: 30px;
 #team .lawyer-profile:hover {
     color: #100C40;
 }
+
+/* Advocate phone and email links */
+
+.lawyer-bio a {
+    color: goldenrod;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
+
+.lawyer-bio a:hover {
+    color: #090536;
+}
+
+.lawyer-bio {
+    line-height: 1.9;
+}
+
 
 /* TABLETS */
 
