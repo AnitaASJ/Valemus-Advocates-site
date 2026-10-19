@@ -537,7 +537,7 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 25px;
-    padding: 10px 25px;
+    padding: 15px 25px;
 }
 
 .brand {
@@ -551,23 +551,6 @@ header {
     width: 95px;
     height: 95px;
     object-fit: contain;
-}
-
-.brand-text h1 {
-    color: #090536;
-    font-family: Georgia, serif;
-    font-size: clamp(1.2rem, 2vw, 2rem);
-    text-transform: uppercase;
-    white-space: nowrap;
-    margin: 0 0 5px;
-}
-
-.brand-text p {
-    color: #25213b;
-    font-family: Georgia, serif;
-    font-size: 0.95rem;
-    font-style: italic;
-    line-height: 1.35;
 }
 
 .brand-text h1 {
