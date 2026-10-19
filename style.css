@@ -329,8 +329,7 @@ header{
                 8. NAVIGATION
 ================================================== */
 
-.navbar{
-
+/*.navbar{
     max-width:var(--site-max-width);
     height:90px;
     margin:auto;
@@ -342,12 +341,12 @@ header{
     justify-content:space-between;
     align-items: center;
 
-}
+} */
 
 
 /* Logo */
 
-.navbar img{
+/*.navbar img{
 
     width:90px;
 
@@ -355,7 +354,7 @@ header{
 
     transition:var(--transition);
 
-}
+}*/
 
 .navbar img:hover{
 
@@ -376,7 +375,6 @@ header{
 
 
 /* Navigation Links */
-
 .nav-menu{
 
     display:flex;
@@ -386,60 +384,32 @@ header{
     gap:5px;
 
 }
-
 .nav-item {
     position: relative;
 }
-
-
 /* Individual Links */
-
 .nav-link{
-
     color:var(--white);
-
     font-size:0.92rem;
-
     font-weight:500;
-
     padding:12px 10px;
-
     border-radius:25px;
-
     transition:var(--transition);
-
     display: block;
-
     white-space: nowrap;
-
 }
-
-
 /* Hover */
-
 .nav-link:hover{
-
     background:var(--secondary-color);
-
     color:var(--primary-color);
-
 }
-
-
 /* Active Link */
-
 .nav-link.active{
-
     background:var(--secondary-color);
-
     color:var(--primary-color);
-
 }
-
 .dropdown{
-
     position:relative;
-
 }
 
 .dropdown-menu{
@@ -531,7 +501,6 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 } 
-
 .navbar {
     display: flex;
     align-items: center;
@@ -539,14 +508,12 @@ header {
     gap: 25px;
     padding: 15px 25px;
 }
-
 .brand {
     display: flex;
     align-items: center;
     gap: 15px;
     flex-shrink: 0;
 }
-
 .brand img {
     width: 95px;
     height: 95px;
@@ -569,8 +536,6 @@ header {
     font-style: italic;
     line-height: 1.35;
 }
-
-
 /* =====================================
    9. MENU BUTTONS
 ===================================== */
