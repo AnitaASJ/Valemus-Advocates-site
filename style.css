@@ -1457,6 +1457,134 @@ margin-bottom: 30px;
 }
 
 
+/* DOCUMENTS SECTION */
+.documents-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 65px 6% 80px;
+    background: #1c1f21;
+    color: #f5f5f5;
+}
+
+.documents-section::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url("Images/Valemus Logo.png");
+    background-repeat: no-repeat;
+    background-position: 43% center;
+    background-size: min(70%, 760px);
+    opacity: 0.055;
+    pointer-events: none;
+}
+
+.documents-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(40px, 8vw, 110px);
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.documents-intro h2 {
+    margin: 0 0 24px;
+    color: #f5f5f5;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+.documents-intro p {
+    max-width: 440px;
+    margin: 0 0 32px;
+    color: #c8c8c8;
+    font-family: Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1.65;
+}
+
+.documents-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 26px;
+    border: 1px solid goldenrod;
+    border-radius: 30px;
+    background: goldenrod;
+    color: #111;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.documents-button:hover {
+    background: transparent;
+    color: goldenrod;
+}
+
+.documents-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #414345;
+}
+
+.document-item {
+    display: block;
+    padding: 17px 0;
+    border-bottom: 1px solid #414345;
+    color: #f3f3f3;
+    font-size: clamp(1.25rem, 2.3vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.document-item:hover {
+    padding-left: 10px;
+    color: goldenrod;
+}
+
+/* TABLETS AND MOBILE */
+@media (max-width: 760px) {
+    .documents-section {
+        padding: 55px 6% 60px;
+    }
+
+    .documents-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .documents-intro h2 {
+        font-size: clamp(2rem, 8vw, 2.7rem);
+        letter-spacing: -0.6px;
+    }
+
+    .documents-intro p {
+        font-size: 1.05rem;
+    }
+
+    .documents-section::before {
+        background-size: 115%;
+        background-position: center 35%;
+    }
+
+    .document-item {
+        padding: 16px 0;
+        font-size: 1.35rem;
+    }
+}
+
+
+
 /* ==================================================
                 15. WHY CHOOSE US
 ================================================== */
