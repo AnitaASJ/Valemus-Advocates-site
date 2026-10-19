@@ -1192,7 +1192,9 @@ transform: translateY(-8px);
 box-shadow: 0 15px 25px rgba(0,0,0,0.15); 
 }
 
-/* ========================== PRACTICE AREAS HEADING ========================== */ 
+/* ==========================
+ PRACTICE AREAS HEADING
+  ========================== */ 
 #practice-areas h3{ 
 text-align: center; 
 color: #090536; 
@@ -1551,6 +1553,139 @@ margin-bottom: 30px;
     padding-left: 10px;
     color: goldenrod;
 }
+
+
+/* HOW WE WORK WITH YOU */
+.how-we-work-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 85px 6% 70px;
+    background: #1c1f21;
+    color: #f4f4f4;
+}
+
+.how-we-work-section::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url("Images/Valemus Logo.png");
+    background-repeat: no-repeat;
+    background-position: center 45%;
+    background-size: min(70%, 760px);
+    opacity: 0.055;
+    pointer-events: none;
+}
+
+.how-we-work-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.how-we-work-intro {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 65px;
+}
+
+.how-we-work-intro h2 {
+    margin: 0;
+    color: #f5f5f5;
+    font-size: clamp(2.3rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+.how-we-work-intro > p {
+    margin: 0;
+    color: #e2dfdc;
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.work-principles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 48px;
+}
+
+.work-principle {
+    min-width: 0;
+    padding-top: 18px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.work-principle h3 {
+    margin: 0 0 14px;
+    color: #f5f5f5;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: 750;
+    line-height: 1.3;
+}
+
+.work-principle p {
+    margin: 0;
+    color: #bcbec2;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+    .how-we-work-intro {
+        gap: 30px;
+    }
+
+    .work-principles {
+        gap: 25px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    .how-we-work-section {
+        padding: 60px 6% 55px;
+    }
+
+    .how-we-work-section::before {
+        background-size: 115%;
+        background-position: center 25%;
+    }
+
+    .how-we-work-intro {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-bottom: 42px;
+    }
+
+    .how-we-work-intro h2 {
+        font-size: clamp(2.2rem, 9vw, 2.8rem);
+    }
+
+    .work-principles {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .work-principle {
+        padding-top: 16px;
+    }
+
+    .work-principle h3 {
+        font-size: 1.45rem;
+    }
+
+    .work-principle p {
+        font-size: 0.98rem;
+    }
+}
+
 
 /* TABLETS AND MOBILE */
 @media (max-width: 760px) {
