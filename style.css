@@ -1310,6 +1310,153 @@ margin-bottom: 30px;
 
 }
 
+
+/* SERVICES SECTION */
+.services-section {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 100px 6% 90px;
+    color: #f4f1ec;
+    background: #141619;
+}
+
+/* Optional decorative legal emblem */
+.services-section::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url("Images/Valemus Logo.png");
+    background-repeat: no-repeat;
+    background-position: center 45%;
+    background-size: min(65%, 700px);
+    opacity: 0.055;
+    pointer-events: none;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-intro {
+    padding-bottom: 55px;
+}
+
+.services-intro h2 {
+    max-width: 760px;
+    margin: 0 0 22px;
+    color: #f5f5f5;
+    font-size: clamp(2rem, 4.2vw, 3.3rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+.services-intro p {
+    max-width: 440px;
+    margin: 0;
+    color: #c6c4c1;
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.service-category {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 45px;
+    padding-top: 36px;
+    border-top: 1px solid #343538;
+}
+
+.service-heading h3 {
+    margin: 0 0 18px;
+    color: #f5f1eb;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    line-height: 1.25;
+}
+
+.service-enquiry {
+    display: inline-block;
+    color: goldenrod;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    transition: color 0.25s ease;
+}
+
+.service-enquiry:hover {
+    color: #f3cc78;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+    gap: 16px 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 19px;
+    color: #e0dedb;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+.service-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.55em;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/* Tablet and mobile */
+@media (max-width: 760px) {
+    .services-section {
+        padding: 65px 6% 60px;
+    }
+
+    .services-section::before {
+        background-size: 100%;
+        background-position: center 30%;
+    }
+
+    .services-intro {
+        padding-bottom: 35px;
+    }
+
+    .services-intro h2 {
+        letter-spacing: -0.7px;
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+    .service-category {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-top: 28px;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+
 /* ==================================================
                 15. WHY CHOOSE US
 ================================================== */
